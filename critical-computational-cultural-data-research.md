@@ -83,6 +83,7 @@
 
 ## Part Three: What AI Missed.
 
+</details>
 
 <details>
   <summary><strong>Christina</strong></summary>
