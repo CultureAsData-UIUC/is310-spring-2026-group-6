@@ -84,4 +84,29 @@
 ## Part Three: What AI Missed.
 
 
+<details>
+  <summary><strong>Christina</strong></summary>
+  
+## Bibliography
+Authors: Shilpa Gite, Hrituja Khatavkar, Ketan Kotecha, et al.
+Title: Explainable stock prices prediction from financial news articles using sentiment analysis
+Venue: PeerJ Computer Science (peer-reviewed journal)
+Year: 2021
+DOI: https://doi.org/10.7717/peerj-cs.340
+Article Link:https://pmc.ncbi.nlm.nih.gov/articles/PMC7924447/
+Code Repository: https://github.com/Hrituja/Stock-Market-Prediction
+
+
+## AI Summury
+ This paper explores how sentiment analysis of financial news can improve stock price prediction. The authors combine historical stock price data with sentiment extracted from news headlines to build a predictive model. They collect over 200,000 financial news headlines and pair them with stock market data from sources like Yahoo Finance. The idea is that investor sentiment, influenced by news, plays a major role in stock price movements.
+To model this relationship, the authors use a deep learning approach based on Long Short-Term Memory (LSTM) networks, which are well-suited for time-series data. They also incorporate Explainable AI (XAI) techniques, specifically LIME, to interpret the model’s predictions. This allows users to understand which words in news headlines contribute to predicted stock movements. The goal is not only to improve prediction accuracy but also to make the model more transparent and trustworthy for decision-making.
+
+
+## Part Two
+The data in this study consists primarily of financial news headlines and stock market data, reflecting how financial events are communicated and interpreted by the media. The news headlines were collected from Pulse, an aggregator that gathers articles from sources like Reuters and Business Standard, with over 210,000 headlines. 
+
+The authors use sentiment analysis and deep learning to analyze how news influences stock prices. The LSTM model learns patterns over time by combining text-based sentiment with numerical stock data, allowing it to capture how past events influence future prices . Additionally, the paper uses Explainable AI to interpret the model. Without machine learning, it would be nearly impossible to process such a large dataset or identify any subtle patterns between language and market behavior. Since the model assumes that sentiment directly impacts prices, it may overlook other factors like certain policies or insider trading. Additionally, since only headlines are used, it could miss a lot of deeper context that sentiment analysis could get from a full article.
+
+## Part Three: What AI Missed.
+The AI summary was generally accurate in describing the main idea of combining sentiment analysis with stock prediction and mentioning LSTM and explainability. But it did oversimplify how the data works and shapes the results, as it did not mention any limitations, such as the fact that only headlines are used, which reduces complex financial narratives into simplified text. Additionally, the AI made the method seem more straightforward than it is, ignoring tradeoffs like bias in news sources.
 </details>
