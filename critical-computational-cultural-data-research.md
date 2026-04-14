@@ -86,7 +86,7 @@
 </details>
 
 <details>
-  <summary><strong>Christina</strong></summary>
+  <summary><strong>Christina: Explainable stock prices prediction from financial news articles using sentiment analysis</strong></summary>
   
 ## Bibliography
 Authors: Shilpa Gite, Hrituja Khatavkar, Ketan Kotecha, et al.
