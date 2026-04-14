@@ -74,15 +74,23 @@
   <summary><strong>Daria</strong></summary>
   
 ## Bibliography
+Title: MapSAM: Adapting Segment Anything Model for
+Automated Feature Detection in Historical Maps
+Authors: Xue Xia, Graduate Student Member, IEEE, Daiwei Zhang, Wenxuan Song, Wei Huang, Lorenz Hurni
 
 
-## AI Summury
- 
+## AI Summary
+ Prompt: In 1-2 paragraphs summarize this article: https://huggingface.co/papers/2411.06971
+ Summary: **MapSAM** is a framework that adapts Meta's Segment Anything Model (SAM) for automated feature detection in historical maps. [huggingface](https://huggingface.co/papers/2411.06971) The core motivation is that automated feature detection could greatly speed up the reconstruction of geospatial history, but the process is typically bottlenecked by the labor-intensive task of manually creating high-quality training data. While SAM offers strong generalization abilities, applying it directly to historical maps in a zero-shot manner struggles with recognizing certain geospatial features and requires manual input prompts, limiting full automation. [huggingface](https://huggingface.co/papers/2411.06971)
+
+To overcome these limitations, MapSAM introduces a parameter-efficient fine-tuning strategy using Weight-Decomposed Low-Rank Adaptation (DoRA) to inject domain-specific knowledge into SAM's image encoder, along with an automatic prompt generation process that removes the need for manual prompting. The framework also upgrades SAM's positional prompts into richer positional-semantic prompts and modifies the mask decoder's cross-attention with masked attention for better feature aggregation. Experiments show MapSAM performs well across both linear and areal historical map segmentation tasks, and notably adapts effectively even when fine-tuned on very limited data — as few as 10 examples. [huggingface](https://huggingface.co/papers/2411.06971)
 
 ## Part Two
+This article discusses a relatively new way to process Historical Map Data, which is called the Segment Anything Model (SAM). SAM has been designed to help the process of digitizing maps and understanding the data that they produce. SAM is a "vision foundation model" used for image segmentation. The SAM model was not specifically created for Map data and still struggles with some prompting, so this article discusses MapSAM, a model they created that is more fine-tuned for this specific use case. The researchers ran an experiment comparing their model to existing models. They tested two different datasets to compare the detection of different types of topographic features, railroads, and vineyards. Both datasets were maps collected from the Swiss Sigfried map(s), which is a complete topographic map of Switzerland compiled between 1870 and 1926.
 
+This article is all about a relatively new development in computational humanities: using computer vision. Computer vision as a whole has been making great strides in recent years, making it much easier to digitize records like maps, which otherwise are much more difficult than text-based documents. While this technology is extremely promising for allowing us to further our understanding of map data, since it is so new, we are still learning about its efficacy, which is both exciting and challenging for researchers. While MapSAM is a step in the right direction, there's still a long way to go to create fully accurate maps, and researchers are still working to find better methods
 ## Part Three: What AI Missed.
-
+Overall, I think AI did a pretty good job of getting the main ideas of this article and explains what SAM is pretty well. The only major details the AI missed were about the methodology and data collection in the article. It also doesn't really discuss the study that the researchers did or how they were aiming to evaluate the model's efficacy. To be very fair about that part, it's the most dense part of the article and requires a good amount of domain knowledge, to the point where I don't even understand most of it.
 </details>
 
 <details>
