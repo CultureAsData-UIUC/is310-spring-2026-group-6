@@ -78,26 +78,70 @@ Overall, I think AI did a pretty good job of getting the main ideas of this arti
 </details>
 
 <details>
-  <summary><strong>Daria</strong></summary>
+  <summary><strong>Daria: Computational Analysis of 140 Years of US Political Speeches Reveals More Positive but Increasingly Polarized Framing of Immigration</strong></summary>
   
 ## Bibliography
-Title: MapSAM: Adapting Segment Anything Model for
-Automated Feature Detection in Historical Maps
-Authors: Xue Xia, Graduate Student Member, IEEE, Daiwei Zhang, Wenxuan Song, Wei Huang, Lorenz Hurni
+Authors: Card, Dallas, Serina Chang, Chris Becker, Julia Mendelsohn, Rob Voigt, Leah Boustan, Ran Abramitzky, and Dan Jurafsky. 
+Title: "Computational Analysis of 140 Years of US Political Speeches Reveals More Positive but Increasingly Polarized Framing of Immigration" Proceedings of the National Academy of Sciences 119, no. 31 (2022): e2120510119. 
+
+Link: DOI: 10.1073/pnas.2120510119
+Github: https://github.com/dallascard/us-immigration-speeches/
 
 
 ## AI Summary
- Prompt: In 1-2 paragraphs summarize this article: https://huggingface.co/papers/2411.06971
- Summary: **MapSAM** is a framework that adapts Meta's Segment Anything Model (SAM) for automated feature detection in historical maps. [huggingface](https://huggingface.co/papers/2411.06971) The core motivation is that automated feature detection could greatly speed up the reconstruction of geospatial history, but the process is typically bottlenecked by the labor-intensive task of manually creating high-quality training data. While SAM offers strong generalization abilities, applying it directly to historical maps in a zero-shot manner struggles with recognizing certain geospatial features and requires manual input prompts, limiting full automation. [huggingface](https://huggingface.co/papers/2411.06971)
+### Prompt: Summarize this article and provide the key points.
+### Summary by Gemini: 
+This article, published in PNAS, presents the first comprehensive quantitative analysis of 140 years of U.S. political rhetoric regarding immigration, covering both congressional and presidential speeches from 1880 to 2020.
 
-To overcome these limitations, MapSAM introduces a parameter-efficient fine-tuning strategy using Weight-Decomposed Low-Rank Adaptation (DoRA) to inject domain-specific knowledge into SAM's image encoder, along with an automatic prompt generation process that removes the need for manual prompting. The framework also upgrades SAM's positional prompts into richer positional-semantic prompts and modifies the mask decoder's cross-attention with masked attention for better feature aggregation. Experiments show MapSAM performs well across both linear and areal historical map segmentation tasks, and notably adapts effectively even when fine-tuned on very limited data — as few as 10 examples. [huggingface](https://huggingface.co/papers/2411.06971)
+## 1. Methodology and Scope
+The researchers used advanced computational tools to analyze a massive dataset:
+The Corpus: Over 17 million congressional speeches (of which ~200,000 were immigration-related) and 5,000 presidential communications.
+Techniques:
+Machine Learning (RoBERTa): Trained to classify the "tone" (pro-immigration, anti-immigration, or neutral).
+Lexicons: 14 specific "frames" (e.g., crime, family, labor) were curated to see how immigrants are characterized.
+Contextual Embeddings (BERT): Used to identify "implicit dehumanizing metaphors"—language that sounds like it refers to things like "animals" or "cargo" without using those exact labels.
+
+## 2. General Historical Trends
+The study identifies three distinct eras in political immigration rhetoric:
+1880–1940 (The Negative Era): Tone was consistently negative across both parties. Interestingly, there was no "spike" in negative rhetoric leading up to the strict 1920s quotas; rather, the sentiment had been staunchly anti-immigrant for decades.
+1940–1965 (The Humanitarian Shift): Sentiment improved dramatically during and after WWII. This shift was driven by humanitarian concerns and a reframing of the U.S. as a "nation of immigrants," peaking around the passage of the 1965 Immigration and Nationality Act.
+1970s–Present (The Polarization Era): While the average tone remains more positive than a century ago, a massive partisan divide began in the late 1970s.
+
+## 3. Key Findings on Polarization and Partisanship
+The research reveals a linear increase in polarization that predates general political polarization by a decade:
+Democrats: Currently express unprecedentedly positive attitudes toward immigration.
+Republicans: Their rhetoric has declined steadily since the late 1970s. Today, Republican speeches are as negative as the average congressional speech was in the 1920s, an era defined by extreme isolationism and quotas.
+Presidents: Modern presidents have historically been more pro-immigration than the average member of Congress. However, Donald Trump is the stark exception, identified as the most anti-immigration president in the 140-year record.
+
+## 4. Framing and Dehumanization
+The study highlights how the two parties use different "frames" to discuss the topic:
+Republican Framing: Disproportionately uses frames related to "crime," "legality," "threats," "deficiency," and "flood/tide."
+Democratic Framing: Focuses on "family," "victims," "contributions," and "culture."
+Implicit Dehumanization: Republicans are significantly more likely to use language suggestive of metaphors like "animals," "cargo," "vermin," and "disease." This language has become more common in Republican rhetoric in recent decades.
+
+## 5. The Persistence of Nationality Bias
+Even after the formal elimination of race-based quotas in the 1960s, the tone of speeches varies wildly based on which nationality is mentioned:
+The "European" Advantage: Speeches mentioning European groups (e.g., Italians, Irish) shifted to positive earlier and remain overwhelmingly positive.
+The Mexican/Chinese Parallel: There is a "striking similarity" between how Mexican immigrants are framed today and how Chinese immigrants were framed during the exclusion era (1882–1943). Both groups are uniquely associated with "crime," "labor," and "legality" frames.
+The Outlier: Mexican immigration is the strongest outlier today; the gap in tone between how politicians discuss Mexican versus European immigrants is as wide as the gap between Democrats and Republicans.
+
+## 6. Conclusion
+The authors conclude that while the U.S. has nominally moved away from race-based exclusion, nationality and geography remain central factors in how politicians characterize immigrants. Despite high public approval for immigration in modern polls, the political discourse—especially on the right—has regressed to 1920s-level negativity for specific groups.
+
 
 ## Part Two
-This article discusses a relatively new way to process Historical Map Data, which is called the Segment Anything Model (SAM). SAM has been designed to help the process of digitizing maps and understanding the data that they produce. SAM is a "vision foundation model" used for image segmentation. The SAM model was not specifically created for Map data and still struggles with some prompting, so this article discusses MapSAM, a model they created that is more fine-tuned for this specific use case. The researchers ran an experiment comparing their model to existing models. They tested two different datasets to compare the detection of different types of topographic features, railroads, and vineyards. Both datasets were maps collected from the Swiss Sigfried map(s), which is a complete topographic map of Switzerland compiled between 1870 and 1926.
+----
+The data in this research are congressional and presidential speeches. In the congressional record, speeches from 140 years might be missing or taken out of context: without mentioning what historical events were happening locally and globally, it's hard to understand what influenced the sentiment of these speeches. Considering that researchers used a keyword-based approach to filter 17 million congressional speeches to detect immigration speeches, some of the keywords, specifically different variations of the words, might be missing from the filtration context. Based on the lecture that we learnt today about lemmatization and stemming of words, and how 'running' and 'run' and 'runners' might be considered as different words and might be omitted from the context if it doesn't exactly match the spelling, which all depends on the decision that is made by a data scientist. In addition, considering the samples of the project that this research looked at (from Congress and the president), it doesn't include media and activists' voices and speeches. Also, we should keep in mind that the Congressional Record also gets edited sometimes.  Overall, while this research offers one of the most comprehensive quantitative analyses of U.S. political speech on immigration to date, its findings should be read as one lens, not the full picture.
 
-This article is all about a relatively new development in computational humanities: using computer vision. Computer vision as a whole has been making great strides in recent years, making it much easier to digitize records like maps, which otherwise are much more difficult than text-based documents. While this technology is extremely promising for allowing us to further our understanding of map data, since it is so new, we are still learning about its efficacy, which is both exciting and challenging for researchers. While MapSAM is a step in the right direction, there's still a long way to go to create fully accurate maps, and researchers are still working to find better methods
+In computational analysis research they used human annotations to train the Roberta classifier, NLP model that detected the tone of the speech for immigration later in the research, and then applied it at scale. Considering the scale of 200,000 of speeches that were analyzed, I feel a computational approach was necessary here. It took 5 annotators to complete only 7626 segments to analyze these speeches for tone and framing. So, this is a perfect case when computation is necessary. In terms of what might get lost, again referring to the lemmatization process, depending on how the author of the analysis scanned the text, some of the word formation might be lost; consequently, some sentences and speeches might not be taken for this simple reason. They used human annotations to train the Roberta classifier and then applied it at scale.
+
+Their research splits the augmentation and analysis. Firstly, researchers prepare the data, which is a part of the augmentation process: download 17M speeches, extract speakers, year, party for each, clean immigration speeches based on wording, used human annotation from 5 researchers to train the Roberta model. The analysis part gets blended at the point when human annotators analyze and classify the content. After NLP classification gets to work, they track trends in the tone of 140 years, comparing the parties' tone (Democrats vs Republicans)
+Identifying specific keywords usage frequency used by each party, such as 'crime', 'families', economy', etc). The main purpose of combining these 2 methods was to actually firstly teach NLP on what the guidelines and rules are that it should follow, and apply computational analysis after (NLP text analysis) to speed the process of labeling 200'000 speeches. 
+
+
 ## Part Three: What AI Missed.
-Overall, I think AI did a pretty good job of getting the main ideas of this article and explains what SAM is pretty well. The only major details the AI missed were about the methodology and data collection in the article. It also doesn't really discuss the study that the researchers did or how they were aiming to evaluate the model's efficacy. To be very fair about that part, it's the most dense part of the article and requires a good amount of domain knowledge, to the point where I don't even understand most of it.
+
+After looking over the Gemini summary and reading the article, I realized that Gemini missed a lot of the statistical and visual table results. For example, dehumanization ratios (under Fig.3) were missing, and the most influential words by era in Table 1 were not mentioned anywhere (under the title 'Language, Framing, and Dehumanization'). It wasn't stated how China, from 1880 to 1900, was mentioned in 20% of all of the congress speeches ( "China occupied an especially prominent place in 19th-century congressional debates on the issue, being mentioned in more than 20% of the immigration related speeches in Congress over the years 1880 to 1900."). Also, Gemini didn't get the statement about dehumanization correctly - it didn't add the comparison with democrats in this statement, which 'has become more common in Republican rhetoric in recent decades'. Overall, Gemini captured the general picture and findings of the research, but omitted most of the visual table details.
 </details>
 
 <details>
