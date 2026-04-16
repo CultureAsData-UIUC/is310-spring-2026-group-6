@@ -42,14 +42,40 @@
   <summary><strong>Ananya</strong></summary>
   
 ## Bibliography
+**Article:** Miller, M. K., & Sutherland, J. L. (2023). *The Effect of Gender on Interruptions at Congressional Hearings*. *American Political Science Review*. [https://doi.org/10.1017/S0003055422000260](https://doi.org/10.1017/S0003055422000260)
+
+**Code/Data:** Harvard Dataverse. [https://doi.org/10.7910/DVN/5PEQSS](https://doi.org/10.7910/DVN/5PEQSS)
 
 
 ## AI Summury
- 
+Miller and Sutherland investigate whether women members of Congress are more likely to be interrupted than their male colleagues during committee hearings, an important question given that committee work is where most congressional business happens and where members can most directly influence policy. The authors analyze over 24,000 congressional committee hearing transcripts from the Government Printing Office (GPO), spanning the 105th through 115th Congresses (1994–2018), which includes speech data from 1,269 Members of Congress. Using computational text analysis methods to detect interruption markers in the transcripts, they examine whether gender predicts the likelihood of being interrupted while controlling for factors such as seniority, party affiliation, committee chairmanship, and the topic of the hearing.
+
+The study finds that women in Congress are more likely to be interrupted than men, with this effect driven primarily by patterns in the U.S. Senate, where women are approximately 10% more likely to be interrupted than men. The effect is dramatically amplified when hearings discuss "women's issues," such as healthcare, family policy, education, and abortion. In these contexts, women are more than twice as likely to be interrupted overall, and in the House specifically, women are six times more likely to be interrupted during such hearings. The authors also examine "interruption clusters," meaning rapid-fire back-and-forth interruptions that indicate aggressive conflict, and find similar gendered patterns. Notably, they find little evidence that women adjust their communication style as they gain seniority, unlike patterns observed among female Supreme Court justices. Analysis of speaker dyads suggests that interruptions are more common in mixed-gender interactions and that men interrupt women more than they interrupt other men.
+
 
 ## Part Two
 
+### What is the Data?
+
+The cultural data being analyzed consists of 24,103 congressional hearing transcripts published by the Government Printing Office from 1994 to 2018. These transcripts were created by professional court reporters who transcribed, word for word, the discussions within Congress.
+
+The data does not contain tone, speed, body language, loudness, or explicit sentiment of the speakers because it is text-based and only provides a verbatim transcript of the discussions. For that reason, the data flattens certain complexities that are valuable for analysis regarding female policymakers in the United States. However, one detail that captures a valuable complexity is the insertion of em dashes in the transcript by reporters when a speaker is interrupted. This forms the basis of the research, as the consistent usage of this syntax allows for computational text analysis and prediction of interruption, namely through regex and logistic regression.
+
+The missing identity context of the speakers in the transcripts is supplemented through additional data from other peer-reviewed research, such as a database of committee assignments from Stewart (2017).
+
+### How is Computation Used and Why?
+
+The computational methods used include regex parsing of the PDFs of the transcripts to pull chunks of speech text and attribute them to the appropriate member of Congress. The researchers then identified all instances containing the aforementioned em dash that signified that the speaker was interrupted.
+
+Given this data, logistic regression was used to calculate the probability of an interruption. This allowed for analysis into the individual and intersectional factors that contribute to the likelihood of being interrupted in a congressional hearing as a policymaker.
+
+The primary purpose of computation in this research was to process and analyze the data. The article's goals shape the data by encouraging it to be filtered mainly to discussions with interruptions and to create groupings of gender dyads for comparison of interruption rates. Overall, computation was required here because it would have been incredibly difficult and time-consuming to manually process the transcripts, attribute them to speakers, count instances of interruptions based on speaker dyads, and so forth. Computation in this case was able to complete these tasks in a reproducible manner without black-box inference, such as from LLMs.
+
 ## Part Three: What AI Missed.
+
+Overall, the AI was good at capturing the high-level details of the research, including the general research question, the factors considered, and the results. However, it missed numerous crucial details that were requested in the prompt for the summarization. One issue is that while the summary noted that the authors controlled for factors such as seniority or party affiliation, it did not mention that this was done with the help of supplemental databases, even though the prompt explicitly asked for data sources rather than only a singular primary data source.
+
+Beyond this, the AI was also vague in its description of the methods and did not specifically identify regex parsing and logistic regression as part of the computational approach. Instead, it simplified the method to "computational text analysis," which does not provide a reasonable level of detail. Although there do not appear to be clear hallucinations, the summary still oversimplified the article in ways that left out important methodological specifics.
 
 
 </details>
