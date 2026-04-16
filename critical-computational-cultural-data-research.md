@@ -181,3 +181,6 @@ The AI summary was generally accurate in describing the main idea of combining s
 <details><summary><strong>Communication</strong></summary></details>
 
 ## Step 3: Find Trends, Divergences, and Silences
+
+
+Based on the conversation of our articles, we have found that 
