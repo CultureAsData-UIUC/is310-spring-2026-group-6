@@ -208,7 +208,25 @@ The AI summary was generally accurate in describing the main idea of combining s
 
 ## Step 3: Find Trends, Divergences, and Silences
 
-Silences: 
+## Trends
+
+- All researchers leveraged a relatively large volume of data, ranging from over 20,000 transcripts to 16.3 million newspaper pages.
+- Many of the research papers relied on pre-existing, well-digitized archives rather than digitizing their own cultural data. Examples include the Government Printing Office for congressional hearing transcripts and *Chronicling America* for historical newspapers.
+- All researchers implemented classification models or classification-based tasks.
+  - Miller & Sutherland classified whether a speech was interrupted.
+  - Lee et al. classified visual media into categories.
+  - Card et al. classified sentiment in text toward immigration.
+  - MapSAM classified map features.
+- All researchers included data from a wide historical window of a decade or more.
+
+## Divergences
+
+- Miller & Sutherland, Card et al., and Gite et al. focused on textual data, while Lee et al. and MapSAM focused on multimodal data, especially images.
+- Lee et al. and MapSAM leveraged neural networks, while Miller & Sutherland used a much simpler logistic regression model or other classification strategy. Card et al. also incorporated human annotators, and Lee et al. likewise relied on human annotation.
+- Lee et al. (*Newspaper Navigator*) crowdsourced annotations, including the use of human annotators to help improve the model’s ability to distinguish art and other visual categories.
+
+
+## Silences: 
 
 Across the group’s articles, a major silence is how the categories get defined. A lot of the studies are dependent on labels, including positive/negative sentiment, pro/anti-ammigration, interruptions, or visual classes, but they don’t address how those categories were created and the wide range of material that gets lost when trying to fit into them, because they can be so broad. Additionally, a lot of data is excluded throughout the studies, since many are reliant upon archives, whose processes often involve many gaps and biases.
 
