@@ -173,11 +173,11 @@ The AI summary was generally accurate in describing the main idea of combining s
 
 
 # Group Part
-## Part One
+## Step 1: Share Your Critical Findings
 
-## Part Two
+## Step 2: Map How Computation Is Being Used
 <details><summary><strong>Augmentation</strong></summary></details>
 <details><summary><strong>Analysis</strong></summary></details>
 <details><summary><strong>Communication</strong></summary></details>
 
-## Part Three
+## Step 3: Find Trends, Divergences, and Silences
