@@ -197,10 +197,15 @@ The AI summary was generally accurate in describing the main idea of combining s
   
 ## Bibliography
 **Title:** The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America
+
 **Authors:** Benjamin Lee, Jaime Mears, Eileen Jakeway, Meghan Ferriter, Chris Adams, Nathan Yarasavage, Deborah Thomas, Kate Zwaard, Daniel Weld
+
 **Publication Venue:** ACM International Conference on Information and Knowledge Management (CIKM 2020) — peer-reviewed conference
+
 **Year:** 2020
+
 **DOI/URL:** https://arxiv.org/abs/2005.01583
+
 **Code Repository:** https://github.com/LibraryOfCongress/newspaper-navigator
 
 ## Part 1: AI Summary
