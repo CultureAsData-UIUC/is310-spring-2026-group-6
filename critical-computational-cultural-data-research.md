@@ -170,3 +170,10 @@ The authors use sentiment analysis and deep learning to analyze how news influen
 ## Part Three: What AI Missed.
 The AI summary was generally accurate in describing the main idea of combining sentiment analysis with stock prediction and mentioning LSTM and explainability. But it did oversimplify how the data works and shapes the results, as it did not mention any limitations, such as the fact that only headlines are used, which reduces complex financial narratives into simplified text. Additionally, the AI made the method seem more straightforward than it is, ignoring tradeoffs like bias in news sources.
 </details>
+
+
+# Group Part
+
+<summary><strong>Augmentation</strong></summary>
+<summary><strong>Analysis</strong></summary>
+<summary><strong>Communication</strong></summary>
