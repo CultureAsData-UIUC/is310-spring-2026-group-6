@@ -208,7 +208,7 @@ The AI summary was generally accurate in describing the main idea of combining s
 
 **Code Repository:** https://github.com/LibraryOfCongress/newspaper-navigator
 
-## Part 1: AI Summary
+## Part 1: AI Summary(Claude)
 
 **Prompt used:** "Summarize this article in 1-2 paragraphs: The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America by Benjamin Lee et al."
 
