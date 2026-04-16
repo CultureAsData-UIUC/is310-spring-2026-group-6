@@ -171,6 +171,49 @@ The authors use sentiment analysis and deep learning to analyze how news influen
 The AI summary was generally accurate in describing the main idea of combining sentiment analysis with stock prediction and mentioning LSTM and explainability. But it did oversimplify how the data works and shapes the results, as it did not mention any limitations, such as the fact that only headlines are used, which reduces complex financial narratives into simplified text. Additionally, the AI made the method seem more straightforward than it is, ignoring tradeoffs like bias in news sources.
 </details>
 
+<details>
+
+  <summary><strong>Vedha: The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America</strong></summary>
+
+## Bibliography
+**Title:** The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America
+**Authors:** Benjamin Lee, Jaime Mears, Eileen Jakeway, Meghan Ferriter, Chris Adams, Nathan Yarasavage, Deborah Thomas, Kate Zwaard, Daniel Weld
+**Publication Venue:** ACM International Conference on Information and Knowledge Management (CIKM 2020) — peer-reviewed conference
+**Year:** 2020
+**DOI/URL:** https://arxiv.org/abs/2005.01583
+**Code Repository:** https://github.com/LibraryOfCongress/newspaper-navigator
+
+
+## Part 1: AI Summary
+
+**Prompt used:** "Summarize this article in 1-2 paragraphs: The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America by Benjamin Lee et al."
+
+**AI-generated response:**
+
+The Newspaper Navigator project, developed by Benjamin Lee and collaborators at the Library of Congress, presents a large-scale machine learning pipeline designed to extract and categorize visual content from over 16 million historic American newspaper pages in the Chronicling America database. Using a Faster-RCNN deep learning model fine-tuned on crowdsourced annotations from the Library of Congress's Beyond Words initiative, the pipeline identifies seven classes of visual content: photographs, illustrations, maps, comics, editorial cartoons, headlines, and advertisements. The result is the largest dataset of extracted visual content from historic newspapers ever produced, complete with image embeddings for visual similarity searching.
+
+The project's primary goal is to make the rich visual culture embedded in historic American newspapers searchable and analyzable at scale for the first time. Previously, users of Chronicling America could only search newspaper text, leaving the visual content — political cartoons, Civil War maps, early photography — largely inaccessible. By releasing the dataset, the fine-tuned model, and all source code into the public domain, the authors aim to enable a wide range of digital humanities, public history, and creative computing research. The paper also demonstrates the dataset's potential through example analyses, such as visualizing the rise of photographs in newspapers at the turn of the 20th century and compiling a collection of Civil War maps from 1861–1865.
+
+
+## Part 2: My Critical Assessment
+
+### What is the Data?
+
+The cultural data being analyzed is the visual content embedded within historic American newspapers — specifically photographs, illustrations, maps, comics, editorial cartoons, headlines, and advertisements — drawn from the Chronicling America database, which spans 174 years of American history from 1789 to 1963 across 47 states, Washington D.C., and Puerto Rico. The data was not collected fresh; it was built on top of millions of newspaper pages already digitized through the National Digital Newspaper Program, a partnership between the Library of Congress and the National Endowment for the Humanities. The training data specifically came from Beyond Words, a crowdsourcing initiative where volunteers drew bounding boxes around visual content in WWI-era newspapers — approximately 10,000 verified annotations in total, which were then reformatted into a standard machine learning format (COCO) to train the model.
+
+The scale is enormous — 16.3 million pages — but the coverage has real gaps worth naming. The selection of which newspapers were included in Chronicling America was driven by which titles existed on microfilm of sufficient quality, meaning entire communities, regions, and language groups are missing or underrepresented. The training data was drawn exclusively from WWI-era newspapers, which means the model was never taught what visual content looked like in, say, the 1850s — and the paper's own testing confirms this matters, with model accuracy dropping dramatically for pre-1875 pages (from ~63% overall down to just 12% for pages from 1850–1875). Most critically for anyone interested in American art and political culture, the dataset captures the existence and location of editorial cartoons, but not their meaning. What a cartoon depicts, who it caricatures, what political argument it makes, or what historical moment it was responding to — none of that is in the dataset. The computation extracts the image but strips out the cultural interpretation entirely.
+
+### How is Computation Used and Why?
+
+The core computational method is a fine-tuned Faster-RCNN object detection model, a deep learning approach from computer vision that draws bounding boxes around objects of interest in an image. The model was trained to recognize 7 categories of visual content and was run across 16.3 million newspaper pages using two Amazon AWS cloud computing instances over 19 days of processing time. In addition to the object detection step, the pipeline also extracts the OCR text within each bounding box (to capture captions and headlines), and generates ResNet image embeddings — numerical representations of each image that allow for fast visual similarity searching.
+
+The primary purpose is augmentation: the computation is not making an argument about American history, it is building a dataset and search tool that makes visual content discoverable at scale for the first time. Without computation, this would be physically impossible — no team of human researchers could manually sort through 16 million newspaper pages to locate and classify every cartoon, map, and photograph. In that sense, computation is absolutely necessary here. However, it is worth questioning what the paper's own goals shaped the data to be: by framing the task as object detection with 7 fixed categories, the authors made editorial cartoons equivalent to advertisements in the pipeline's logic — just another bounding box class. The cultural weight of a political cartoon, its satirical intent, its relationship to specific historical events, is entirely outside the scope of what the model can see or capture. The computation opens a door to studying American visual political culture at scale, but what walks through that door still requires human interpretation.
+
+## Part 3: What AI Missed
+
+The AI summary was accurate in its broad strokes — it correctly identified the Faster-RCNN model, the Beyond Words crowdsourcing origin of the training data, the 7 content categories, and the public domain release of code and data. However, it glossed over the most important critical dimension of the paper: the limitations of the model's generalization across time. The AI described the dataset as enabling analysis of 174 years of American newspaper history without mentioning that the model was trained exclusively on WWI-era pages, and that its accuracy collapses for pre-1875 content — a detail the paper itself explicitly tests and reports in Table 4. The AI also framed the project in entirely positive terms, presenting it as smoothly "enabling" new research, without engaging with the fact that the training data (Beyond Words) had known quality issues: volunteers were only required to annotate one bounding box per page, and there was documented disagreement between annotators. Most importantly, the AI never raised the question of what gets lost when a political cartoon becomes a bounding box — it treated the extraction of visual content as equivalent to understanding it. That conflation is exactly the kind of flattening that the assignment asks us to look for critically, and it is the most significant thing the AI summary missed.
+
+</details>
 
 # Group Part
 ## Step 1: Share Your Critical Findings
