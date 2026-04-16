@@ -183,6 +183,7 @@ The AI summary was generally accurate in describing the main idea of combining s
 ## Step 3: Find Trends, Divergences, and Silences
 
 Silences: 
+
 Across the group’s articles, a major silence is how the categories get defined. A lot of the studies are dependent on labels, including positive/negative sentiment, pro/anti-ammigration, interruptions, or visual classes, but they don’t address how those categories were created and the wide range of material that gets lost when trying to fit into them, because they can be so broad. Additionally, a lot of data is excluded throughout the studies, since many are reliant upon archives, whose processes often involve many gaps and biases.
 
 
