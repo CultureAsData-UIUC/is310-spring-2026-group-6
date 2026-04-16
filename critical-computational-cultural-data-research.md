@@ -185,6 +185,21 @@ Code Repository: https://github.com/Hrituja/Stock-Market-Prediction
 
 ## AI Summury
  This paper explores how sentiment analysis of financial news can improve stock price prediction. The authors combine historical stock price data with sentiment extracted from news headlines to build a predictive model. They collect over 200,000 financial news headlines and pair them with stock market data from sources like Yahoo Finance. The idea is that investor sentiment, influenced by news, plays a major role in stock price movements.
+<details>
+  <summary><strong>Christina: Explainable stock prices prediction from financial news articles using sentiment analysis</strong></summary>
+  
+## Bibliography
+Authors: Shilpa Gite, Hrituja Khatavkar, Ketan Kotecha, et al.
+Title: Explainable stock prices prediction from financial news articles using sentiment analysis
+Venue: PeerJ Computer Science (peer-reviewed journal)
+Year: 2021
+DOI: https://doi.org/10.7717/peerj-cs.340
+Article Link:https://pmc.ncbi.nlm.nih.gov/articles/PMC7924447/
+Code Repository: https://github.com/Hrituja/Stock-Market-Prediction
+
+
+## AI Summury
+ This paper explores how sentiment analysis of financial news can improve stock price prediction. The authors combine historical stock price data with sentiment extracted from news headlines to build a predictive model. They collect over 200,000 financial news headlines and pair them with stock market data from sources like Yahoo Finance. The idea is that investor sentiment, influenced by news, plays a major role in stock price movements.
 To model this relationship, the authors use a deep learning approach based on Long Short-Term Memory (LSTM) networks, which are well-suited for time-series data. They also incorporate Explainable AI (XAI) techniques, specifically LIME, to interpret the model’s predictions. This allows users to understand which words in news headlines contribute to predicted stock movements. The goal is not only to improve prediction accuracy but also to make the model more transparent and trustworthy for decision-making.
 
 
@@ -199,12 +214,110 @@ The AI summary was generally accurate in describing the main idea of combining s
 
 
 # Group Part
+<details>
+  <summary><strong>Christina: Explainable stock prices prediction from financial news articles using sentiment analysis</strong></summary>
+  
+## Bibliography
+Authors: Shilpa Gite, Hrituja Khatavkar, Ketan Kotecha, et al.
+Title: Explainable stock prices prediction from financial news articles using sentiment analysis
+Venue: PeerJ Computer Science (peer-reviewed journal)
+Year: 2021
+DOI: https://doi.org/10.7717/peerj-cs.340
+Article Link:https://pmc.ncbi.nlm.nih.gov/articles/PMC7924447/
+Code Repository: https://github.com/Hrituja/Stock-Market-Prediction
+
+
+## AI Summury
+ This paper explores how sentiment analysis of financial news can improve stock price prediction. The authors combine historical stock price data with sentiment extracted from news headlines to build a predictive model. They collect over 200,000 financial news headlines and pair them with stock market data from sources like Yahoo Finance. The idea is that investor sentiment, influenced by news, plays a major role in stock price movements.
+To model this relationship, the authors use a deep learning approach based on Long Short-Term Memory (LSTM) networks, which are well-suited for time-series data. They also incorporate Explainable AI (XAI) techniques, specifically LIME, to interpret the model’s predictions. This allows users to understand which words in news headlines contribute to predicted stock movements. The goal is not only to improve prediction accuracy but also to make the model more transparent and trustworthy for decision-making.
+
+
+## Part Two
+The data in this study consists primarily of financial news headlines and stock market data, reflecting how financial events are communicated and interpreted by the media. The news headlines were collected from Pulse, an aggregator that gathers articles from sources like Reuters and Business Standard, with over 210,000 headlines. 
+
+The authors use sentiment analysis and deep learning to analyze how news influences stock prices. The LSTM model learns patterns over time by combining text-based sentiment with numerical stock data, allowing it to capture how past events influence future prices . Additionally, the paper uses Explainable AI to interpret the model. Without machine learning, it would be nearly impossible to process such a large dataset or identify any subtle patterns between language and market behavior. Since the model assumes that sentiment directly impacts prices, it may overlook other factors like certain policies or insider trading. Additionally, since only headlines are used, it could miss a lot of deeper context that sentiment analysis could get from a full article.
+
+## Part Three: What AI Missed.
+The AI summary was generally accurate in describing the main idea of combining sentiment analysis with stock prediction and mentioning LSTM and explainability. But it did oversimplify how the data works and shapes the results, as it did not mention any limitations, such as the fact that only headlines are used, which reduces complex financial narratives into simplified text. Additionally, the AI made the method seem more straightforward than it is, ignoring tradeoffs like bias in news sources.
+</details>
+
+<details>
+  <summary><strong>Vedha: Extracting Visual Content from 16 million Historical Newspapers </strong></summary>
+  
+## Bibliography
+**Title:** The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America
+**Authors:** Benjamin Lee, Jaime Mears, Eileen Jakeway, Meghan Ferriter, Chris Adams, Nathan Yarasavage, Deborah Thomas, Kate Zwaard, Daniel Weld
+**Publication Venue:** ACM International Conference on Information and Knowledge Management (CIKM 2020) — peer-reviewed conference
+**Year:** 2020
+**DOI/URL:** https://arxiv.org/abs/2005.01583
+**Code Repository:** https://github.com/LibraryOfCongress/newspaper-navigator
+
+## Part 1: AI Summary
+
+**Prompt used:** "Summarize this article in 1-2 paragraphs: The Newspaper Navigator Dataset: Extracting and Analyzing Visual Content from 16 Million Historic Newspaper Pages in Chronicling America by Benjamin Lee et al."
+
+**AI-generated response:**
+
+The Newspaper Navigator project, developed by Benjamin Lee and collaborators at the Library of Congress, presents a large-scale machine learning pipeline designed to extract and categorize visual content from over 16 million historic American newspaper pages in the Chronicling America database. Using a Faster-RCNN deep learning model fine-tuned on crowdsourced annotations from the Library of Congress's Beyond Words initiative, the pipeline identifies seven classes of visual content: photographs, illustrations, maps, comics, editorial cartoons, headlines, and advertisements. The result is the largest dataset of extracted visual content from historic newspapers ever produced, complete with image embeddings for visual similarity searching.
+
+The project's primary goal is to make the rich visual culture embedded in historic American newspapers searchable and analyzable at scale for the first time. Previously, users of Chronicling America could only search newspaper text, leaving the visual content — political cartoons, Civil War maps, early photography — largely inaccessible. By releasing the dataset, the fine-tuned model, and all source code into the public domain, the authors aim to enable a wide range of digital humanities, public history, and creative computing research. The paper also demonstrates the dataset's potential through example analyses, such as visualizing the rise of photographs in newspapers at the turn of the 20th century and compiling a collection of Civil War maps from 1861–1865.
+
+
+## Part 2: My Critical Assessment
+
+### What is the Data?
+The cultural data being analyzed is the visual content embedded within historic American newspapers, specifically photographs, illustrations, maps, comics, editorial cartoons, headlines, and advertisements drawn from the Chronicling America database, which spans 174 years of American history from 1789 to 1963 across 47 states, Washington D.C., and Puerto Rico. The data was not collected fresh but was built on top of millions of newspaper pages already digitized through the National Digital Newspaper Program, a partnership between the Library of Congress and the National Endowment for the Humanities. The training data specifically came from Beyond Words, a crowdsourcing initiative where volunteers drew bounding boxes around visual content in WWI era newspapers, with approximately 10,000 verified annotations in total, which were then reformatted into a standard machine learning format to train the model.
+The scale is enormous at 16.3 million pages, but the coverage has real gaps worth naming. The selection of which newspapers were included in Chronicling America was driven by which titles existed on microfilm of sufficient quality, meaning entire communities, regions, and language groups are missing or underrepresented. The training data was drawn exclusively from WWI era newspapers, which means the model was never taught what visual content looked like in the 1850s, and the paper's own testing confirms this matters, with model accuracy dropping dramatically for pre-1875 pages from about 63% overall down to just 12% for pages from 1850 to 1875. Most critically for anyone interested in American art and political culture, the dataset captures the existence and location of editorial cartoons but not their meaning. What a cartoon depicts, who it caricatures, what political argument it makes, or what historical moment it was responding to is none of that is in the dataset. The computation extracts the image but strips out the cultural interpretation entirely.
+
+### How is Computation Used and Why?
+
+The core computational method is a fine-tuned Faster-RCNN object detection model, a deep learning approach from computer vision that draws bounding boxes around objects of interest in an image. The model was trained to recognize 7 categories of visual content and was run across 16.3 million newspaper pages using two Amazon AWS cloud computing instances over 19 days of processing time. In addition to the object detection step, the pipeline also extracts the OCR text within each bounding box (to capture captions and headlines), and generates ResNet image embeddings which are numerical representations of each image that allow for fast visual similarity searching.
+
+The primary purpose is augmentation ie building a dataset and search tool that makes visual content discoverable at scale for the first time. However, it's important to note that the cultural weight of a political cartoon, its satirical intent, its relationship to specific historical events, is entirely outside the scope of what the model can see or capture. The computation opens a door to studying American visual political culture at scale, but what walks through that door still requires human interpretation.
+
+## Part 3: What AI Missed
+
+The AI summary got the basics right but missed the key issue that the model was only trained on WWI-era newspapers, so it performs poorly on older content (before 1875). It also ignored problems with the training data quality and oversimplified things by treating detecting images as the same as actually understanding them.
+
+</details>
+
+# Group Part
 ## Step 1: Share Your Critical Findings
 
-## Step 2: Map How Computation Is Being Used
-<details><summary><strong>Augmentation</strong></summary></details>
-<details><summary><strong>Analysis</strong></summary></details>
-<details><summary><strong>Communication</strong></summary></details>
+<details>
+  <summary>Augmentation</summary>
+
+  Lee et al. (2020) and MapSAM (2024) are the clearest examples of augmentation in our group. Both use advanced machine learning techniques to take large collections of visual data that were previously unsearchable and turn them into something structured and usable. MapSAM (2024) adapts Meta's Segment Anything Model to detect geographic features in historical maps, with the explicit goal of giving researchers access to a type of data that was essentially impossible to work with at scale before. Lee et al. (2020) does the same thing for 16.3 million newspaper pages, using a Faster-RCNN model to extract 7 categories of visual content including comics, maps, and photographs. In both cases, the computation is not making an argument; it is building infrastructure that did not exist before.
+
+  *American Stories* (Dell et al., 2023) also belongs firmly in this category. The entire pipeline is designed to clean, structure, and improve OCR text extracted from historical newspaper scans so that the resulting data is actually usable for downstream research. Like MapSAM (2024) and Lee et al. (2020), the computation in *American Stories* exists to improve the data itself rather than to analyze it directly.
+
+</details>
+
+<details>
+  <summary>Analysis</summary>
+
+  Card et al. (2022) and Gite et al. (2021) lean more toward analysis, though both have significant augmentation elements built in. In Card et al. (2022), the researchers first prepare and clean 17 million congressional speeches, then use human annotators to train a RoBERTa classifier, and finally apply that classifier at scale to find patterns in how political rhetoric around immigration shifted over 140 years. The augmentation work enables the analysis, but the real goal is making a historical and political argument about polarization and framing over time. Gite et al. (2021) similarly uses sentiment classification as a means to an end, feeding the output of that classification into an LSTM deep learning model to find patterns between news language and stock market behavior. The computation is oriented toward producing a finding rather than producing a dataset.
+
+  Miller and Sutherland (2023) also fits here. It uses regex parsing and keyword classification to detect and measure patterns of interruption across over 24,000 congressional hearing transcripts, with the goal of making an argument about gender dynamics in political speech rather than simply organizing the data.
+
+</details>
+
+<details>
+  <summary>Communication</summary>
+
+  Lee et al. (2020) is the only article in our group with a strong and explicit communication orientation. The dataset, the trained model, and all source code are released into the public domain for unrestricted reuse. The authors also packaged smaller derivative datasets specifically for users without coding experience, and they describe plans to build a public-facing search interface. The goal of Lee et al. (2020) is not just to do research but to make visual history accessible to educators, historians, genealogists, and the general public. This sets it apart from every other article in our group, where the intended audience is primarily other researchers.
+
+</details>
+
+<details>
+  <summary>Does computation match how the authors describe their goals?</summary>
+
+  Mostly yes, but there are some interesting gaps worth noting. MapSAM (2024) and Lee et al. (2020) both present themselves as augmentation tools built for future researchers, and that matches what the computation is actually doing. *American Stories* (Dell et al., 2023) is similarly honest about its purpose, framing itself clearly as a dataset-building project without overstating its analytical claims.
+
+  The more interesting cases are Card et al. (2022) and Gite et al. (2021). Card et al. (2022) is framed as a historical argument about polarization, but a large portion of the actual computational work is data preparation and model training, which looks much more like augmentation. The analysis emerges at the end of a long pipeline that is mostly about getting the data ready. Similarly, Gite et al. (2021) presents itself as a predictive tool for financial decision-making, but the more significant contribution may actually be the sentiment classification pipeline itself rather than the stock predictions it produces. In both cases, computation is doing more foundational work than the framing of the papers suggests.
+
+</details>
+
 
 ## Step 3: Find Trends, Divergences, and Silences
 
