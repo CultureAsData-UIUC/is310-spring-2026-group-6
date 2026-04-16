@@ -173,7 +173,11 @@ The AI summary was generally accurate in describing the main idea of combining s
 
 
 # Group Part
+## Part One
 
+## Part Two
 <details><summary><strong>Augmentation</strong></summary></details>
 <details><summary><strong>Analysis</strong></summary></details>
 <details><summary><strong>Communication</strong></summary></details>
+
+## Part Three
