@@ -1,7 +1,5 @@
 
 # Dataset Documentation
-## American Art as Political Artifact: A Dataset of Politically Consequential Visual Culture (1754–2020)
-
 
 ## What Is This Dataset and Why Does It Exist?
 
@@ -54,7 +52,7 @@ Each row represents a single work or cluster of related works. The columns are:
 
 The dataset was manually created, but I used publically available data set catalogues, museum archives and the AI tool Claude (Anthropic) as a research assistant throughout the process in two ways:
 
-**1. Checking and supplementing historical context.** For works I knew well (e.g., Migrant Mother, Iwo Jima), I used museum archives to verify specific dates, confirm current locations and find details I might have missed (e.g., that Flagg modeled Uncle Sam on his own face; that the Silence = Death*poster predated ACT UP). This was genuinely useful for catching errors and adding depth to the significance field without replacing my own historical knowledge.
+**Checking and supplementing historical context.** For works I knew well (e.g., Migrant Mother, Iwo Jima), I used museum archives to verify specific dates, confirm current locations and find details I might have missed (e.g., that Flagg modeled Uncle Sam on his own face; that the Silence = Death*poster predated ACT UP). This was genuinely useful for catching errors and adding depth to the significance field without replacing my own historical knowledge.
 
 **Limitations of using AI assistance:** Claude's knowledge of less-documented works particularly by artists of color, Indigenous artists and works from community archives was noticeably thinner than its knowledge of Euro-American works. For entries like Emory Douglas's Black Panther illustrations, the Chicano Park murals, and Ernest Withers's photographs, I had to rely more heavily on my own research and was more cautious about the details Claude supplied. This is itself a data point about how existing digitized archives skew toward documenting white and institutional art history.
 
@@ -64,10 +62,12 @@ The dataset was manually created, but I used publically available data set catal
 Inclusion criteria:
 For a work to be included in the dataset, it had to meet three basic requirements. First, it had to have a documented and traceable political effect, meaning there is real historical evidence that it changed public opinion, was used in a political campaign, was censored by a government or institution, helped catalyze a protest movement, or contributed to a legislative outcome. Second, the work had to be primarily visual. I excluded literary works like The Jungle by Upton Sinclair, though I did include visual adaptations and illustrations connected to it, since those circulated as independent political images. Third, the work had to either originate in the United States or be so directly tied to American political history that leaving it out would create a meaningful gap.
 
+
 What I excluded:
 I left out works that are significant in art history but whose influence stayed within aesthetic rather than political conversations. Artists like Winslow Homer and Georgia O'Keeffe are important figures, but their work did not directly shape legislation, mobilize movements, or enter the political record in the ways this dataset is tracking. I also excluded works that have clear political themes but no documented evidence of real-world political impact. Having a political subject is not the same as being a political instrument.
 The hardest exclusion decisions:
 The most difficult judgment calls involved works that are not single objects at all. Several entries in the dataset are actually clusters of related works that I grouped under one row, such as "Ferguson protest murals and protest art" or "Post-9/11 visual culture." This was a compromise I made deliberately. The BLM visual movement and the AIDS Memorial Quilt are not individual artworks; they are entire visual cultures made up of thousands of objects. I flagged all of these in the notes field as umbrella entries that could and should be broken into individual items if the dataset is expanded in the next phase.
+
 
 What I know is missing:
 The dataset reflects a real limitation in the archival record I was drawing from. It is still weighted toward works that entered mainstream documentation, which means it underrepresents Indigenous visual art traditions, Latinx political art outside the Chicano movement, and Asian American visual activism beyond the Chinese Exclusion era. This is not something I could fix simply by spending more time on research. These gaps exist because community archives are less digitized and less indexed than institutional ones. Addressing them in the next phase will require deliberately seeking out sources outside the mainstream digital record.
