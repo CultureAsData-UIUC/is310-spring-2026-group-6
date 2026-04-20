@@ -2,25 +2,20 @@
 # Dataset Documentation
 ## American Art as Political Artifact: A Dataset of Politically Consequential Visual Culture (1754–2020)
 
----
 
 ## What Is This Dataset and Why Does It Exist?
 
-This dataset catalogs 75 works of American visual culture — paintings, photographs, political cartoons, murals, posters, performance art, and memorials — selected for their political consequence. The central question driving the project is: **how has visual art shaped, responded to, and become inseparable from American political history?**
+This dataset catalogs 75 works of American art pieces such as paintings, photographs, political cartoons, murals, posters, performance art and memorials which were selected for their political consequence. The central question driving the project is: How has visual art shaped, responded to, and become inseparable from American political history?
 
-The dataset spans from Benjamin Franklin's *Join or Die* (1754) to the George Floyd memorial murals (2020), covering colonial propaganda, Civil War abolitionism, New Deal documentary photography, civil rights protest imagery, AIDS activism, and contemporary Black Lives Matter visual culture. The unit of analysis is not the artwork as aesthetic object, but the artwork as political event — something that changed minds, mobilized movements, was censored, was weaponized, or became the visual memory of a historical moment.
+The dataset spans from Benjamin Franklin's *Join or Die* (1754) to the George Floyd memorial murals (2020), covering colonial propaganda, Civil War abolitionism, New Deal documentary photography, civil rights protest imagery, AIDS activism, and contemporary Black Lives Matter visual culture. The unit of analysis is not the artwork as aesthetic object, but the artwork as a political event or something that changed minds, mobilized movements, was censored, was weaponized or became the visual memory of a historical moment.
 
-I chose this topic because American political history is often taught through texts — speeches, legislation, court decisions — while the images that actually shaped public consciousness get treated as illustration rather than argument. This dataset treats them as primary sources in their own right.
+I chose this topic because American political history is often taught through texts such as speeches, legislation, court decisions while the images that actually shaped public consciousness get treated as illustration rather than argument. This dataset treats them as primary sources in their own right.
 
----
 
 ## Approach: Creating Data from Scratch
 
-This dataset was built from scratch, item by item, through manual research and interpretive decision-making. There was no pre-existing structured dataset I could audit or augment that captured this specific combination of visual culture and political impact. Existing art databases (like those from the Smithsonian or Getty) catalog provenance and medium but do not assess political consequence, historical context, or impact rating — the variables most central to my research questions.
+This dataset was built from scratch, item by item, through manual research and personal decision-making. There was no pre-existing structured dataset I could audit or augment that captured this specific combination of visual culture and political impact. Existing art databases (like those from the Smithsonian or Getty) catalog provenance and medium but do not assess political consequence or historical context 
 
-Building from scratch meant confronting what the assignment correctly warns about: every dataset embeds interpretive choices. Deciding whether something qualifies as "politically consequential" is not a neutral call. It required developing explicit criteria and applying them consistently across very different media, time periods, and communities.
-
----
 
 ## Data Structure and Variable Decisions
 
@@ -50,67 +45,52 @@ Each row represents a single work or cluster of related works. The columns are:
 
 **Why a political impact rating?** The rating (1–5) is admittedly the most subjective variable. I defined a 5/5 rating as works that demonstrably changed public opinion, directly contributed to policy or legislative outcomes, catalyzed mass movements, or became so widely reproduced that they defined the visual memory of an event. A 4/5 covers works with significant documented influence that fall short of that threshold. I ended up with very few entries below 4/5 because I was deliberately selecting the most consequential works — the rating system is more useful for distinguishing within the dataset than for filtering it.
 
-**Why include gender and race/ethnicity of the artist?** One of the patterns I was most interested in is the gap between who creates politically consequential art and who is represented within it. Works like *Migrant Mother* (white female photographer) and *The Scourged Back* (white male photographers) depict Black and poor subjects while the authorial gaze belongs to someone outside that community. Tracking artist identity makes this dynamic legible in the data.
+**Why include gender and race/ethnicity of the artist?** One of the patterns I was most interested in is the gap between who creates politically consequential art and who is represented within it. Works like *Migrant Mother* (white female photographer) and *The Scourged Back* (white male photographers) depict African-american subjects while the authorial gaze belongs to someone outside that community. Tracking artist identity makes this dynamic legible in the data.
 
 **Why the `notes` field?** The assignment asks us to document what gets lost in data. The notes field is where complications live. Paul Revere copied his engraving from Henry Pelham without credit. Dorothea Lange never paid Florence Owens Thompson. Ernest Withers was later revealed to be an FBI informant. Maya Lin's race and gender were weaponized against her Vietnam memorial design. These facts don't fit cleanly into any structured variable, but they are central to how these works function as political artifacts.
 
----
 
 ## Computational Tools Used
 
-The dataset was manually created, but I used Claude (Anthropic) as a research assistant throughout the process in two ways:
+The dataset was manually created, but I used publically available data set catalogues, museum archives and the AI tool Claude (Anthropic) as a research assistant throughout the process in two ways:
 
-**1. Checking and supplementing historical context.** For works I knew well (e.g., Migrant Mother, Iwo Jima), I used Claude to verify specific dates, confirm current institutional locations, and surface details I might have missed (e.g., that Flagg modeled Uncle Sam on his own face; that the *Silence = Death* poster predated ACT UP). This was genuinely useful for catching errors and adding depth to the significance field without replacing my own historical knowledge.
+**1. Checking and supplementing historical context.** For works I knew well (e.g., Migrant Mother, Iwo Jima), I used museum archives to verify specific dates, confirm current locations and find details I might have missed (e.g., that Flagg modeled Uncle Sam on his own face; that the Silence = Death*poster predated ACT UP). This was genuinely useful for catching errors and adding depth to the significance field without replacing my own historical knowledge.
 
-**2. Testing my categorization logic.** I used Claude to probe edge cases — whether a performance piece like Fusco and Gómez-Peña's *Two Undiscovered Amerindians* belonged in a dataset defined around visual art, whether documentary photographs are "art" in the relevant sense, whether a memorial (Maya Lin's Vietnam wall) operates like a political artwork. These conversations helped me articulate and refine my inclusion criteria.
+**Limitations of using AI assistance:** Claude's knowledge of less-documented works particularly by artists of color, Indigenous artists and works from community archives was noticeably thinner than its knowledge of Euro-American works. For entries like Emory Douglas's Black Panther illustrations, the Chicano Park murals, and Ernest Withers's photographs, I had to rely more heavily on my own research and was more cautious about the details Claude supplied. This is itself a data point about how existing digitized archives skew toward documenting white and institutional art history.
 
-**Limitations of using AI assistance:** Claude's knowledge of less-documented works — particularly by artists of color, Indigenous artists, and works from community archives — was noticeably thinner than its knowledge of canonical Euro-American works. For entries like Emory Douglas's Black Panther illustrations, the Chicano Park murals, and Ernest Withers's photographs, I had to rely more heavily on my own research and was more cautious about the details Claude supplied. This is itself a data point about how existing digitized archives skew toward documenting white and institutional art history.
-
----
 
 ## Inclusion and Exclusion Decisions
 
-**Inclusion criteria:**
-- The work must have had a documented, traceable political effect (changed public opinion, was used in a campaign, was censored, catalyzed protest, shaped legislation)
-- The work must be primarily visual (I excluded literary works like *The Jungle*, though I included its visual adaptations)
-- The work must be American in origin or directly central to American political history
+Inclusion criteria:
+For a work to be included in the dataset, it had to meet three basic requirements. First, it had to have a documented and traceable political effect, meaning there is real historical evidence that it changed public opinion, was used in a political campaign, was censored by a government or institution, helped catalyze a protest movement, or contributed to a legislative outcome. Second, the work had to be primarily visual. I excluded literary works like The Jungle by Upton Sinclair, though I did include visual adaptations and illustrations connected to it, since those circulated as independent political images. Third, the work had to either originate in the United States or be so directly tied to American political history that leaving it out would create a meaningful gap.
 
-**What I excluded:**
-- Works with primarily aesthetic rather than political significance (Winslow Homer, Georgia O'Keeffe)
-- Works that influenced art history but not political history
-- Works with significant political themes but no evidence of real-world political impact
-- Architecture (except the Vietnam Memorial, which I included because of its documented political controversy and effect)
+What I excluded:
+I left out works that are significant in art history but whose influence stayed within aesthetic rather than political conversations. Artists like Winslow Homer and Georgia O'Keeffe are important figures, but their work did not directly shape legislation, mobilize movements, or enter the political record in the ways this dataset is tracking. I also excluded works that have clear political themes but no documented evidence of real-world political impact. Having a political subject is not the same as being a political instrument.
+The hardest exclusion decisions:
+The most difficult judgment calls involved works that are not single objects at all. Several entries in the dataset are actually clusters of related works that I grouped under one row, such as "Ferguson protest murals and protest art" or "Post-9/11 visual culture." This was a compromise I made deliberately. The BLM visual movement and the AIDS Memorial Quilt are not individual artworks; they are entire visual cultures made up of thousands of objects. I flagged all of these in the notes field as umbrella entries that could and should be broken into individual items if the dataset is expanded in the next phase.
 
-**The hardest exclusion decisions:** Several entries in the dataset are actually clusters of related works treated as a single entry (e.g., "Ferguson protest murals and protest art," "Post-9/11 visual culture"). This was a methodological compromise. The BLM visual movement and the AIDS quilt are not single objects; they are entire visual cultures. I flagged these in the notes field as umbrella entries that could be disaggregated in a scaled dataset.
+What I know is missing:
+The dataset reflects a real limitation in the archival record I was drawing from. It is still weighted toward works that entered mainstream documentation, which means it underrepresents Indigenous visual art traditions, Latinx political art outside the Chicano movement, and Asian American visual activism beyond the Chinese Exclusion era. This is not something I could fix simply by spending more time on research. These gaps exist because community archives are less digitized and less indexed than institutional ones. Addressing them in the next phase will require deliberately seeking out sources outside the mainstream digital record.
 
-**What I know is missing:** The dataset is still weighted toward work that entered the mainstream record — meaning it underrepresents Indigenous visual art traditions, Latinx political art outside the Chicano movement, and Asian American visual activism beyond the Chinese Exclusion era. These aren't oversights I can correct by adding more hours; they reflect gaps in the digitized archival record I was working from, which I'll need to address deliberately in the next phase.
 
----
 
 ## Patterns and Tensions That Emerged
+Working through the dataset item by item produced several analytical observations I had not anticipated at the start.
 
-Several analytical patterns emerged that I hadn't anticipated before building the dataset:
+- The white gaze problem in politically progressive imagery. A striking number of the most influential images depicting oppressed communities were made by white artists and photographers. Dorothea Lange photographed Dust Bowl migrants and Japanese American internees. The photographer behind the Scourged Back image was white. Eddie Adams, who photographed the execution of a Viet Cong prisoner, was a white American. These images did genuine political work. They built public support for New Deal programs, helped turn Northern public opinion against slavery, and shifted sentiment on the Vietnam War. But the bodies in the frame were not the bodies behind the camera. Structuring the data with an artist identity column makes this pattern visible across eras and across movements in a way that is much harder to see when looking at individual works in isolation.
 
-**The white-gaze problem in politically progressive imagery.** A significant number of the most influential political images depicting oppressed communities were made by white artists and photographers: Dorothea Lange's Dust Bowl work, the *Scourged Back* photograph, Eddie Adams's Vietnam execution photograph, the *Migrant Mother*. These images did real political work — they built public support for New Deal programs, turned opinion against slavery, shifted sentiment on Vietnam. But the bodies depicted were not the bodies behind the camera. The dataset makes this pattern visible across eras in a way that's harder to see when looking at works individually.
+- Photography versus painting as political instruments. The dataset reveals a clear shift in the dominant medium of political persuasion around 1860. Before the Civil War, the most politically consequential works are paintings, engravings, and woodcut cartoons. After the rise of mass-circulation illustrated newspapers and then press photography, photographs become the primary vehicle for political influence. This matters for how we think about the political impact rating. A widely circulated cartoon in the 1850s might have reached tens of thousands of people over several months. A photograph published in a national newspaper in the 1940s could reach millions within days of the event it depicted.
 
-**Photography vs. painting as political instruments.** The dataset shows a clear shift around 1860: before the Civil War, paintings, engravings, and cartoons dominate the political visual record. After the invention of mass-circulation press photography, photographs become the primary instruments of political persuasion. This has implications for what "impact" means — a cartoon in the 1850s might reach tens of thousands; a photograph in the 1940s reaches millions in a day.
-
-**The tension between political intent and political reception.** Several entries show works whose political meaning transformed after creation: *We Can Do It!* was an internal factory poster that became a feminist icon 40 years later. *Join or Die* was created for the French and Indian War and redeployed as Revolutionary propaganda. *Piss Christ* was a devotional work that became a battleground over government arts funding. The dataset captures intended political context but can't fully capture these post-hoc transformations — that's a limitation I'll need to think about in documentation.
-
----
+- The tension between political intent and political reception. Several entries show works whose political meaning changed completely after they were made. We Can Do It! was originally an internal Westinghouse factory poster meant to boost worker morale during World War II. It was rediscovered four decades later and became one of the most recognized symbols of feminist empowerment. Join or Die was Benjamin Franklin's argument for colonial unity during the French and Indian War and was later repurposed as Revolutionary propaganda. Piss Christ was made as a devotional work and became the center of a national debate about government arts funding. The dataset captures the original political context for each work, but it cannot fully account for these later transformations in meaning. That is a real limitation I will need to think about as the dataset grows.
 
 ## Next Steps: Scaling the Dataset
 
-In the next phase, I plan to scale this dataset toward 500–1,000 items using a combination of approaches:
+In the next phase, I plan to scale this dataset toward 100–500 items using a combination of approaches:
 
-**Option 1 — Institutional API access.** The Smithsonian, Library of Congress, and Metropolitan Museum of Art all have open APIs with structured metadata. I can query these for works tagged with politically relevant terms (civil rights, labor, protest, suffrage, etc.) and pull structured data at scale. The challenge will be that institutional metadata reflects curatorial decisions — it will over-represent canonical works and under-represent community art, street murals, and protest ephemera.
+1. The first option is to use institutional API access. The Smithsonian, the Library of Congress, and the Metropolitan Museum of Art all have open APIs with structured metadata available for public use. I can query these collections for works tagged with politically relevant terms like civil rights, labor, protest, or suffrage, and pull structured data at scale. The main limitation of this approach is that institutional metadata reflects curatorial decisions made by those institutions. It will over-represent canonical works in the established Western art historical tradition and under-represent community art, street murals, protest ephemera, and work that was never formally collected.
 
-**Option 2 — LLM-assisted annotation.** I can feed images and basic metadata into a vision model and ask it to generate structured annotations for the `subject_matter`, `themes`, and `significance` fields. This would allow me to process a much larger corpus, but I'll need to build an evaluation framework to check how accurately the model applies my interpretive criteria — especially the political impact assessment.
+2. The second option is LLM-assisted annotation. I can provide a vision model with images and basic metadata and prompt it to generate structured annotations for fields like subject matter, themes, and significance. This would allow me to process a much larger corpus than I could manage manually. The challenge is that I would need to build a careful evaluation framework to check how well the model is actually applying my interpretive criteria, especially the political impact rating, which requires historical reasoning that a model might handle inconsistently.
 
-**Option 3 — Targeted archival expansion.** To address the gaps I identified (Indigenous art, Latinx visual culture, Asian American activism), I'll supplement with targeted searches in community archives: the Chicano/Latino Arts Archive at UC Berkeley, the Wing Luke Museum digital collections, the Smithsonian's National Museum of the American Indian. This won't scale the same way, but it will make the dataset more representative.
+3. The third option is targeted archival expansion. To address the representational gaps I identified, I can search community-held archives directly, including the Chicano/Latino Arts Archive at UC Berkeley, the Wing Luke Museum digital collections in Seattle, and the Smithsonian's National Museum of the American Indian. This approach will not produce the same volume as an API query, but it will make the dataset more historically honest.
 
-The central methodological challenge of scaling is this: the `significance` field — the interpretive core of each entry — took the most time and judgment to write for each item. Automating it risks losing exactly the kind of close historical reasoning that makes the dataset useful. My goal is to use computation to expand the corpus of items while preserving human-authored significance notes for at least the highest-impact entries.
-
----
-
-*Dataset created Spring 2026. Source materials drawn from Library of Congress, Smithsonian Institution, National Archives, and individual institutional catalogs as noted in each entry.*
+The hardest methodological challenge of scaling is not technical. It is about the significance field. That field is the interpretive core of each entry, and writing it well for each item took more time and judgment than any other part of the process. Automating it risks replacing careful historical reasoning with plausible-sounding text that misses the point of why a particular work mattered. My plan is to use computation to expand the list of items in the corpus while keeping human-authored significance notes for at least the highest-impact entries, where the interpretive stakes are highest.
