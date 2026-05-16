@@ -37,6 +37,8 @@
 - I learned that even data from reputable sources should be thoroughly inspected. In my case, this was particularly important to ensure that the documents stayed consistent in structure and information provided across the time period I was scraping, which spanned over 20 years. This helped make sure that my resulting dataset could be reliably used to study the legislative behavior/productivity of female legislators in the Illinois General Assembly.
 
 **Jasmitha:**
+- Digital archives are not neutral sources. Chronicling America already reflects institutional decisions about which newspapers were preserved, digitized, and searchable. Some newspapers, like The Woman’s Tribune from Nebraska, appeared repeatedly in my dataset because they were highly digitized and easily retrievable through keyword searches.
+- Deduplication and data cleaning are essential when working with large cultural datasets. I had to remove duplicate URLs, standardize newspaper titles, and use regex to extract city and state information from inconsistent formats. Without cleaning the data, my counts and interpretations would have been inaccurate.
 
 ---
 
@@ -69,6 +71,8 @@
 - I learned that it is very difficult, and sometimes nearly impossible, to fully represent measures such as “legislative productivity.” In its whole form, this would mean being able to understand exactly which bills that fell into the categories prioritized by female voters actually touched on issues female voters care about, how many of these policies were passed into law, and how many individuals the politician was able to impact through these policies. This, however, would significantly inflate the dataset and introduce subjectivity, as there may not be discrete measures to consistently categorize and label these policies. This pushed me to consider how to continue sharing data that has an impact and sheds light on female legislative behavior by creating a clear, narrow definition of legislative productivity and ensuring transparency about what inferences can be produced from the dataset and what assumptions cannot be made.
 
 **Jasmitha:**
+- OCR text can make historical newspapers searchable, but it also distorts them. Words are merged together, misspelled, or skipped entirely, which means computational analysis may reflect scanning errors as much as historical language.
+- Structured data removes cultural context. Once newspapers become spreadsheet rows, elements like page layout, advertisements, typography, and article placement disappear, even though they shape how readers originally understood the material.
 
 ---
 
@@ -96,8 +100,9 @@
 
 **Ananya:**
 I learned that there should be as much transparency as possible in the documentation of computational outputs to make it easier for the data to be properly interpreted by users, whether it is the general public attempting to learn more about their elected officials or academics attempting to study female legislative behaviors. As I was writing my report for the initial 50-row dataset, I realized that despite my efforts to provide security for my LLM-augmented dataset by creating a layer of citations for the data found, researchers might still feel uncomfortable utilizing it due to potential inconsistencies in coverage and categorization by the LLMs. This led me to leverage discrete scraping and categorizing methods in my final dataset to showcase the legislative efforts of female legislators. I made it a point to share exactly how many female legislators the dataset covers, which General Assemblies it covers, and how the categorization of whether a bill was in healthcare, education/children, or employment was explicitly made through the categorization provided by the sponsorship reports themselves. This showcases that there is strong consistency in the data and that its findings can share insights about these legislators during this time period, but should not be extrapolated beyond this. I believe that this approach makes the dataset much more approachable for researchers and the public alike while maintaining ethical standards.
-**Jasmitha:**
 
+**Jasmitha:**
+- Large datasets can create a false sense of certainty. Even with thousands of articles, many entries contained OCR errors, incomplete metadata, or repetitive newspaper sources, so I had to treat the dataset as partial and imperfect rather than fully representative of suffrage discourse.
 ---
 
 ## Principle 4: Diverse approaches to similar material reveal what each method cannot see on its own
@@ -124,7 +129,10 @@ I learned that there should be as much transparency as possible in the documenta
 
 **Ananya:**
 I learned that the true power of the dataset was best revealed when its many underlying trends could be shown through visualizations. For this reason, I developed visualizations that showcased how the simple counts in the dataset could be used to show the tens of thousands of bills that female legislators were associated with, the interesting dip in bill filings both overall and when looking at averages during certain General Assembly sessions, and how female legislators in the House and Senate fluctuated in their legislative output over time. All of these showed that there were many other insights and research questions that could be developed from the main data sources that could not have been fully expected without these processes.   
+
 **Jasmitha:**
+- Some of the most interesting findings came from mismatches between expectation and output. For example, Nebraska appeared far more frequently than I expected because activist newspapers like The Woman’s Tribune dominated early results, showing how archival preservation and search systems shape historical visibility.
+
 
 ---
 
@@ -137,4 +145,4 @@ I learned that the true power of the dataset was best revealed when its many und
 | Christina | Stock market crash media coverage dataset; created a dataset of newspaper snippets from Chronicling America about the 1929, 1937, and 1962 crashes; used Python scripts to fetch articles through the Library of Congress API, classify article snippets with keyword-based rules, and merge manual and computational datasets| 
 | Vedha | Cultural art dataset (American political visual culture, 18th–19th century); museum API scraping (Art Institute of Chicago, Met, Cleveland Museum of Art, Harvard Art Museums); Python-based scraping and CSV normalization; dataset design, cleaning and interpretive restructuring|
 | Ananya | Illinois women legislators dataset; CAWP and Illinois General Assembly Sponsor Bill Listing report matching; scraping and parsing sponsor report records; fuzzy matching between CAWP and ILGA names/IDs; topic classification for healthcare, employment, and education/children bills; aggregation into woman-chamber-General Assembly rows; Altair visualizations of legislative productivity trends |
-| Jasmitha | |
+| Jasmitha | Women’s suffrage newspaper dataset (1890–1920) using Chronicling America; Python-based API collection with requests, pandas, and regex; metadata cleaning and city/state extraction from inconsistent newspaper titles; OCR text analysis, keyword frequency comparisons between pro- and anti-suffrage discourse, and computational scaling from manual archival exploration to a 3,000+ article datase|
