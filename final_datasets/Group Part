@@ -23,6 +23,9 @@
 - There will always be more you think you can add to try and make things more accurate or better somehow, at some point, you have to call things good enough so you can move to more important matters.
 
 **Christina:**
+- Working with newspaper data taught me that a “newspaper article” in an archive is not always a full article. In my project, I was mostly working with OCR search snippets from Chronicling America, not complete headlines or full article text. That mattered because snippets only show a small part of the article, so any coding or classification has to be honest about that limitation.
+- Before building a dataset, researchers should understand the difference between what the archive actually provides and what they wish it provided. I originally had to rename my text column from something like headline text to snippet_text because calling it a headline would have misrepresented the data.
+- Archives are also shaped by digitization choices. Chronicling America is useful, but it does not represent every newspaper equally. Some papers appeared more often in my dataset because of what had been digitized and made searchable, not because they were necessarily more important to stock market crash coverage.
 
 **Vedha:**
 - Working with museum APIs showed me that “available data” is already a filtered version of cultural history. Even when scraping at scale, what is returned is shaped by institutional tagging systems, search rankings, and what has been digitized in the first place. This means the dataset is not discovering culture, but reproducing what institutions have made searchable.
@@ -49,7 +52,11 @@
 - Any change that occurs over time cannot be represented well with a map; they're designed to show you a snapshot of a space at any given time. This poses problems when looking at things like economic trends, since they're usually representative of other social forces, which can be hard to measure.
 - Median income is only one measure of the economic health of a community; ideally, I would have other measures that could shape a more holistic picture, but that is outside the scope of this project.
 - A major detail of the Mapping Inequality dataset was the inclusion of area descriptions; however, these documents are somewhat difficult to digitize due to inconsistencies in the print format and note-taking styles of different HOLC employees.
+
 **Christina:**
+- A newspaper snippet might look like it is simply reporting a financial event, but it is also shaping how readers understand that event. In stock market crash coverage, newspapers were not just saying that the market crashed. They were creating a story about blame, fear, recovery, or uncertainty.
+- Converting newspaper coverage into structured fields like media_tone, mentions_cause, or mentions_recovery made patterns easier to count, but it also flattened the original meaning. For example, a snippet about financial ruin or suicide could be coded as “Negative,” but that label does not fully capture the human suffering or emotional weight behind the article.
+- Some of the most interesting cultural meanings came from the difference between surface wording and deeper context. A snippet could sound neutral in wording but still describe a deeply negative situation, which made tone classification harder than it first seemed.
 
 **Vedha:**
 - In building a cultural dataset of politically significant artworks, I found that metadata often replaces interpretation rather than supporting it. A field like “political context” looks descriptive, but it already compresses complex historical events into a single framing.
@@ -74,7 +81,10 @@
 
 **Adin:**
 - If anything was overly repetitive, I immediately removed it. In some cases, there were fields where every entry was the same, so I removed them. I didn't fight the data, though. If trying to remove something caused errors, I left it ('Layer' field)
+
 **Christina:**
+- My project showed me that automated classification still depends on human choices. I used keyword rules to classify tone, recovery language, numeric mentions, and causal mentions, but those rules came from my own decisions about which words counted as negative, positive, or causal.
+= Keeping the classification rules transparent was important because it made the dataset easier to audit. Unlike an LLM-generated classification, the keyword-based method could be checked by another person because the rules were written directly into the Python script.
 
 **Vedha:**
 - In my project, I initially experimented with AI-assisted annotation for describing artworks, but found that it tended to flatten interpretation into generic summaries. This reinforced the importance of keeping interpretive work separate from computational pipelines.
@@ -100,6 +110,9 @@
 **Adin:**
 
 **Christina:**
+- My project combined close reading with computational scaling, and each method revealed something different. The first 60 rows were manually coded, which helped me notice complicated cases like advertisements, suicide reports, and ideological framing. The larger 660-row dataset made it possible to see broader patterns in tone, cause, and recovery language.
+- Scaling also made the limitations of the method more obvious. The classifier could count keywords, but it could not understand irony, denial, context, or emotional complexity. This showed that computational results should not replace close reading, especially when working with cultural material.
+- Comparing different crash periods also showed that cultural data is shaped by time. Later crash coverage often referred back to earlier crashes, meaning each event was interpreted through the memory of previous ones. The crash was not just an economic event; it became a repeated cultural script in American media.
 
 **Vedha:**
 - Working with museum datasets alongside scraping workflows showed me that different institutions structure the same cultural object in incompatible ways, which makes “standardization” itself an interpretive act.
@@ -118,7 +131,7 @@
 |---|---|
 | Daria Meshcheriakova | Immigration law dataset (IL, CA, AZ 2009–2026); TF-IDF + logistic regression pipeline; manual labeling with written reasoning; data collection from NCSL, LegiScan, and Urgan Non-profile API
 | Adin | |
-| Christina | |
+| Christina | Stock market crash media coverage dataset; created a dataset of newspaper snippets from Chronicling America about the 1929, 1937, and 1962 crashes; used Python scripts to fetch articles through the Library of Congress API, classify article snippets with keyword-based rules, and merge manual and computational datasets| 
 | Vedha | Cultural art dataset (American political visual culture, 18th–19th century); museum API scraping (Art Institute of Chicago, Met, Cleveland Museum of Art, Harvard Art Museums); Python-based scraping and CSV normalization; dataset design, cleaning and interpretive restructuring|
 | Ananya | |
 | Jasmitha | |
